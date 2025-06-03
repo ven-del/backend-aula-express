@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, HOST, () => {
-    console.log(`Servidor rodando em: http>//${HOST}:${PORT}}`)
+    console.log(`Servidor rodando em: http://${HOST}:${PORT}}`)
 })
