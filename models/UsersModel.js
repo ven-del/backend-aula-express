@@ -15,31 +15,31 @@ class UsersModel {
     ]
 
     static authenticate(login, senha) {
-        const index = UsersModel.list.findIndex(item => item.login === login && item.senha === senha);
-        return UsersModel.list[index];
+        const index = this.list.findIndex(item => item.login === login && item.senha === senha);
+        return this.list[index];
     }
 
     static read() {
-        return UsersModel.list;
+        return this.list;
     }
 
     static getById(id) {
-        const data = UsersModel.list.filter(item => item.id === Number(id));
+        const data = this.list.filter(item => item.id === Number(id));
         return data
     }
 
     static create(data) {
-        UsersModel.list.push(data);
+        this.list.push(data);
     }
 
     static update(id, data) {
-        const index = UsersModel.list.findIndex(item => item.id === Number(id));
-        UsersModel.list[index] = data;
+        const index = this.list.findIndex(item => item.id === Number(id));
+        this.list[index] = data;
     }
 
     static delete(id) {
-        const index = UsersModel.list.findIndex(item => item.id === Number(id));
-        UsersModel.list.splice(index, 1);
+        const index = this.list.findIndex(item => item.id === Number(id));
+        this.list.splice(index, 1);
     }
 }
 
