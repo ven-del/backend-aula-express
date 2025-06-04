@@ -26,7 +26,7 @@ class CafesController {
     }
 
     delete(req, res) {
-        id = req.params.id;
+        const id = req.params.id;
         CafesModel.delete(id);
         return res.json({ message: 'Café removido com sucesso!' });
     }

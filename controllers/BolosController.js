@@ -26,7 +26,7 @@ class BolosController {
     }
 
     delete(req, res) {
-        id = req.params.id;
+        const id = req.params.id;
         BolosModel.delete(id);
         return res.json({ message: 'Bolo removido com sucesso!' });
     }
