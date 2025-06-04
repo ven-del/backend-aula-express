@@ -30,6 +30,7 @@ class CafesModel {
     ];
 
     static read() {
+        this.list.sort((a, b) => a.id - b.id);
         return this.list;
     }
 
