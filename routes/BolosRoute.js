@@ -3,16 +3,16 @@ const BolosController = require('../controllers/BolosController');
 
 const BolosRouter = express.Router();
 
-const bolosController = new BolosController();
+const bolo = new BolosController();
 
-BolosRouter.get('/bolos', bolosController.read);
+BolosRouter.get('/bolos', bolo.read);
 
-BolosRouter.get('/bolos/:id', bolosController.getById);
+BolosRouter.get('/bolos/:id', bolo.getById);
 
-BolosRouter.post('/bolos', bolosController.create);
+BolosRouter.post('/bolos', bolo.create);
 
-BolosRouter.put('bolos/:id', bolosController.update);
+BolosRouter.put('bolos/:id', bolo.update);
 
-BolosRouter.delete('/bolos/:id', bolosController.delete);
+BolosRouter.delete('/bolos/:id', bolo.delete);
 
 module.exports = BolosRouter;
