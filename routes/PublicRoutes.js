@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const AuthController = require('../controllers/AuthController');
+const { signToken } = require('../utilities/jwt')
+
 
 const PublicRoutes = express.Router();
 
@@ -9,7 +11,7 @@ PublicRoutes.post('/login', (req, res) => {
     const auth = new AuthController();
     const data = auth.login(body.login, body.senha);
     if (data) {
-        const token = jwt.sign(data, 'banana', { expiresIn: '8h' });
+        const token = signToken(data)
         return res.json({
             token: token,
         })
@@ -20,3 +22,5 @@ PublicRoutes.post('/login', (req, res) => {
     })
 
 })
+
+module.exports = PublicRoutes;

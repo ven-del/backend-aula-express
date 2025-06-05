@@ -3,13 +3,13 @@ class UsersModel {
         {
             id: 1,
             login: 'admin',
-            senha: 123,
+            senha: "123",
             
         },
         {
             id: 2,
             login: 'admin2',
-            senha: 321,
+            senha: "321",
             
         }
     ]
